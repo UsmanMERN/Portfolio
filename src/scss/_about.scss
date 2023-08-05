@@ -1,0 +1,16 @@
+.profile-image {
+    border-radius: 1.6rem;
+    width: 300px;
+    justify-self: center;
+    align-items: center;
+}
+@media (max-width: 992px) {
+    .profile-image {
+        width: 60vw;
+    }
+}
+@media (max-width: 992px) {
+    .profile-image {
+        width: 70vw;
+    }
+}

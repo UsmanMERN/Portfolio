@@ -1,0 +1,161 @@
+.skill-badge {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.2em 0.1em;
+    border: 3px solid #8e9aaf;
+    border-radius: 2px;
+    position: relative;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #8e9aaf;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.skill-badge:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #8e9aaf;
+    z-index: -1;
+}
+
+.skill-badge:hover,
+.skill-badge:focus {
+    color: white;
+}
+
+.skill-badge:hover:before,
+.skill-badge:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.skill-badge:active {
+    transform: scale(0.9);
+}
+
+// border of skills ul
+.skill-badge--border {
+    border: 2px solid #8e9aaf;
+    min-height: 45vh;
+}
+
+@media (max-width: 992px) {
+    .hover-effect {
+        font-size: 17px;
+        background: transparent;
+        border: none;
+        padding: 1em 1.5em;
+        color: #000;
+        text-transform: uppercase;
+        position: relative;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+    .hover-effect::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color: #8e9aaf;
+        transition: 0.5s ease;
+    }
+
+    .hover-effect.active {
+        color: #fff;
+    }
+
+    .hover-effect.active::before {
+        width: 100%;
+    }
+
+    .hover-effect::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        background-color: #8e9aaf;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .hover-effect.active::after {
+        height: 100%;
+        transition-delay: 0.4s;
+        color: aliceblue;
+    }
+}
+
+// qualifications
+.hover-effect--qualification {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.hover-effect--qualification::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #8e9aaf;
+    transition: 0.5s ease;
+}
+
+.hover-effect--qualification:hover {
+    color: #8e9aaf;
+    transition-delay: 0.5s;
+}
+
+.hover-effect--qualification.active {
+    color: #fff;
+}
+
+.hover-effect--qualification.active::before {
+    width: 100%;
+}
+
+.hover-effect--qualification::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #8e9aaf;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.hover-effect--qualification.active::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}

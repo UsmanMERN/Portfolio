@@ -1,0 +1,71 @@
+.header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .icon {
+        display: block;
+    }
+    .navbar {
+        z-index: var(--z-fixed);
+        position: relative;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(12.3px);
+        -webkit-backdrop-filter: blur(12.3px);
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        .navbar-content {
+            position: absolute;
+            bottom: 100%;
+            left: 0%;
+            width: 100%;
+            background-color: var(--body-color);
+            /* From https://css.glass */
+        }
+
+        @media (min-width: 992px) {
+            z-index: var(--z-fixed);
+            position: fixed;
+            bottom: initial;
+            top: 0;
+            left: 0;
+
+            .icon {
+                display: none;
+            }
+            .navbar-content {
+                position: static;
+                width: auto;
+                background-color: transparent;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-nav {
+            flex-direction: row;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .content-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
+        align-items: center;
+    }
+    .toggle {
+        visibility: hidden;
+    }
+}
+.icon {
+    font-size: larger;
+}
+.nav-link {
+    cursor: pointer;
+    font-weight: bolder;
+}

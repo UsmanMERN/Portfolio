@@ -1,0 +1,107 @@
+/* ==================================        GOOGLE FONTS     =================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* ==================================        Partial files     =================================== */
+
+@import "./scss/bootstrap";
+@import "./scss/header";
+@import "./scss/home";
+@import "./scss/about";
+@import "./scss/skills";
+@import "./scss/project";
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font) !important;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  color: var(--title-color) !important;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/*=============== ADJUST THE MAIN  ===============*/
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 160vh;
+}
+main {
+  flex: 1 0 auto;
+  // margin-top: 3rem;
+}
